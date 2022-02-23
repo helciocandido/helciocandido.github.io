@@ -1,0 +1,94 @@
+.contato {
+  background: #000000;
+}
+
+.contato-container {
+  max-width: 1200px;
+  padding: 60px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.contato-text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: #b8b8b8;
+}
+
+.contato-lista li {
+  margin-left: 30px;
+  position: relative;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contato-lista li:first-child::before {
+  content: url("../img/mail_icon.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -30px;
+}
+
+.contato-lista li:nth-child(2)::before {
+  content: url("../img/phone_icon.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -30px;
+}
+
+.contato-lista li:last-child::before {
+  content: url("../img/in_icon.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -30px;
+}
+
+.contato-lista li a {
+  color: #ffffff;
+}
+
+.contato-lista li a:hover {
+  background: linear-gradient(180deg, #d921ab 0%, #3e3e99 100%);
+}
+
+@media (max-width: 800px) {
+  .contato-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contato .subtitle {
+    color: #ffffff;
+  }
+  .contato-text {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contato-lista li {
+    font-size: 0.875rem;
+  }
+  .contato-lista li:first-child::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .contato-lista li:nth-child(2)::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .contato-lista li:last-child::before {
+    width: 12px;
+    height: 12px;
+  }
+}
